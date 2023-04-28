@@ -1,0 +1,117 @@
+>> for i=1:7040
+if Data_valid(i,2)==0.0125
+break
+end
+end
+i
+
+i =
+
+        7040
+
+Data_valid(5,2)
+
+ans =
+
+   -1.0875
+
+Data_valid(1:5,2)
+
+ans =
+
+   -1.0875
+   -1.0875
+   -1.0875
+   -1.0875
+   -1.0875
+
+for i=1:7040
+if Data_valid(i,2)==0.0125
+i
+end
+end
+for i=1:7040
+if Data_valid(i,2)==0.0125
+display(i)
+end
+end
+for i=1:7040
+if Data_valid(i,2)==0.01249808
+break
+end
+end
+i
+
+i =
+
+        3521
+
+for i=3521:3600
+Y_example(i-3520)=Data_valid(i,3);
+Z_example(i-3520)=Data_valid(i,1);
+end
+Plot(Y,Z);
+函数或变量 'Plot' 无法识别。
+ 
+是不是想输入:
+plot(Y,Z);
+plot(Y_example,Z_example);
+plot(Y_example,Z_example,'-b*','LineWidth',0.3);
+ylim([-0.001,0.007])
+plot(Y_example,Z_example,'-k*','LineWidth',0.3);
+ylim([-0.001,0.007]);
+grid on;
+xticks([0,1,2,3,4]);
+函数或变量 'Data_valid' 无法识别。
+ 
+>> plot(Y_example,Z_example,'-k*','LineWidth',0.3);
+ylim([-0.001,0.007]);
+grid on;
+xticks([0,1,2,3,4]);
+>> pbaspect([1,1]);
+错误使用 matlab.graphics.axis.Axes/set
+设置类 'Axes' 的属性 'PlotBoxAspectRatio' 时出错:
+值必须为包含 3 个元素的数值向量
+
+出错 pbaspect (第 53 行)
+        set(ax,'plotboxaspectratio',val);
+ 
+>> pbaspect([1,1,1]);
+>> plot(Y_example,Z_example,'-k*','LineWidth',0.3);
+ylim([-0.001,0.007]);
+grid on;
+xticks([0,1,2,3,4]);
+pbaspect([1,1,1]);
+>> axis equal;
+>> ylim([-0.001,0.007]);
+>> plot(Y_example,Z_example,'-k*','LineWidth',0.3);
+ylim([-0.001,0.007]);
+grid on;
+xticks([0,1,2,3,4]);
+pbaspect([1,1,1]);
+>> t=title(Cut at K=0.0125);
+t.FontSize=16;
+t.FontWeight='Bold';
+ t=title(Cut at K=0.0125);
+             ↑
+无效表达式。请检查缺失的乘法运算符、缺失或不对称的分隔符或者其他语法错误。要构造矩阵，请使用方括号而不是圆括号。
+ 
+>> t=title('Cut at K=0.0125');
+t.FontSize=16;
+t.FontWeight='Bold';
+>> xlabel('Delta Energy(meV)');
+ylabel('Intensity(arbitrary units)');
+>> xl= xlabel('Delta Energy(meV)');
+yl=ylabel('Intensity(arbitrary units)');
+>> xl.Fontsize=12;
+yl.Fontsize=12;
+类 'matlab.graphics.primitive.Text' 的属性 'Fontsize' 无法识别。
+ 
+是不是想输入:
+>> xl.FontSize=12;
+>> yl.Fontsize=12;
+类 'matlab.graphics.primitive.Text' 的属性 'Fontsize' 无法识别。
+ 
+是不是想输入:
+>> yl.FontSize=12;
+>> 

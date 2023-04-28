@@ -1,0 +1,65 @@
+for i=1:7040
+if Data_valid(i,2)==0.0125
+break
+end
+end
+i
+
+i =
+
+        7040
+
+>> Data_valid(5,2)
+
+ans =
+
+   -1.0875
+
+>> Data_valid(1:5,2)
+
+ans =
+
+   -1.0875
+   -1.0875
+   -1.0875
+   -1.0875
+   -1.0875
+
+>> for i=1:7040
+if Data_valid(i,2)==0.0125
+i
+end
+end
+>> for i=1:7040
+if Data_valid(i,2)==0.0125
+display(i)
+end
+end
+>> for i=1:7040
+if Data_valid(i,2)==0.01249808
+break
+end
+end
+i
+
+i =
+
+        3521
+
+>> for i=3521:3600
+Y_example(i-3520)=Data_valid(i,3);
+Z_example(i-3520)=Data_valid(i,1);
+end
+>> Plot(Y,Z);
+函数或变量 'Plot' 无法识别。
+ 
+是不是想输入:
+>> plot(Y,Z);
+>> plot(Y_example,Z_example);
+>> plot(Y_example,Z_example,'-b*','LineWidth',0.3);
+>> ylim([-0.001,0.007])
+>> plot(Y_example,Z_example,'-k*','LineWidth',0.3);
+ylim([-0.001,0.007]);
+grid on;
+xticks([0,1,2,3,4]);
+>> 

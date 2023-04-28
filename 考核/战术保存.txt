@@ -1,0 +1,121 @@
+>> imagesc([X(1),X(88)],[Y(1),Y(80)],Z');
+xlabel('K(r,l,u)');
+ylabel('Delta Energy(meV)');
+ax=gca;
+ax.FontSize=13;
+t=title('Intensity map');
+t.FontSize=16;
+t.FontWeight='Bold';
+pbaspect([1 1 1]);
+函数或变量 'Z' 无法识别。
+ 
+>> clear X
+>> clear Y
+>> for i=1:88
+X(i)=Data_valid(i*80,2);
+end
+for j=1:80
+Y(j)=Data_valid(j,3);
+end
+>> X(1:5)
+
+ans =
+
+   -1.0875   -1.0625   -1.0375   -1.0125   -0.9875
+
+>> Y(1:5)
+
+ans =
+
+    0.0250    0.0750    0.1250    0.1750    0.2250
+
+>> for i=1:88
+for j=1:80
+Z(81-j,i)=Data_valid(80*i-80+j,1);
+end
+end
+>> imagesc(X,Y,Z);
+xlabel('K(r,l,u)');
+ylabel('Delta Energy(meV)');
+ax=gca;
+ax.FontSize=13;
+t=title('Intensity map');
+t.FontSize=16;
+t.FontWeight='Bold';
+pbaspect([1 1 1]);
+>> for j=1:80
+Y(j)=Data_valid(81-j,3);
+end
+>> imagesc(X,Y,Z);
+xlabel('K(r,l,u)');
+ylabel('Delta Energy(meV)');
+ax=gca;
+ax.FontSize=13;
+t=title('Intensity map');
+t.FontSize=16;
+t.FontWeight='Bold';
+pbaspect([1 1 1]);
+>> for j=1:80
+Y(j)=Data_valid(j,3);
+end
+>> imagesc(X,Y,Z);
+xlabel('K(r,l,u)');
+ylabel('Delta Energy(meV)');
+ax=gca;
+ax.FontSize=13;
+t=title('Intensity map');
+t.FontSize=16;
+t.FontWeight='Bold';
+pbaspect([1 1 1]);
+>> for i=1:88
+for j=1:80
+Z(j,i)=Data_valid(80*i-80+j,1);
+end
+end
+>>  for j=1:80
+Y(j)=Data_valid(j,3);
+end
+>> imagesc(X,Y,Z);
+xlabel('K(r,l,u)');
+ylabel('Delta Energy(meV)');
+ax=gca;
+ax.FontSize=13;
+t=title('Intensity map');
+t.FontSize=16;
+t.FontWeight='Bold';
+pbaspect([1 1 1]);
+>> imagesc(X,[Y(80),Y(1)],Z);
+xlabel('K(r,l,u)');
+ylabel('Delta Energy(meV)');
+ax=gca;
+ax.FontSize=13;
+t=title('Intensity map');
+t.FontSize=16;
+t.FontWeight='Bold';
+pbaspect([1 1 1]);
+>> imagesc(X,Y,Z);
+xlabel('K(r,l,u)');
+ylabel('Delta Energy(meV)');
+ax=gca;
+ax.FontSize=13;
+t=title('Intensity map');
+t.FontSize=16;
+t.FontWeight='Bold';
+pbaspect([1 1 1]);
+>> ax.YDir='normal';
+>> grid on
+>> pbaspect([1 1 1]);
+>> axis equal;
+>> xlim([-1.1,1.1]);
+>> xticks([-1,-0.5,0,0.5,1]);
+>> lim=caxis
+
+lim =
+
+   -0.0000    0.3394
+
+>> caxis([0,0.005])
+>> colormap(turbo)
+>> colorbar
+>> FaceColor='interp';
+>> 
